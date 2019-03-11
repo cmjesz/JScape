@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" onMouseDragged="#windowResizeDrag" onMouseMoved="#updateCursor" onMousePressed="#windowResizeClick" onMouseReleased="#windowResizeRelease" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LayoutController">
+   <children>
+      <StackPane fx:id="webViewStackPane" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="95.0" />
+      <HBox alignment="CENTER_RIGHT" layoutX="179.0" layoutY="1.0" onMouseDragged="#windowMoved" onMousePressed="#windowPressed" style="-fx-background-color: #1c1cbf;" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <Button maxHeight="13.0" maxWidth="13.0" minHeight="13.0" minWidth="13.0" mnemonicParsing="false" onMouseClicked="#windowMinimized" style="-fx-background-radius: 0;" text="_" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="6.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxHeight="13.0" maxWidth="13.0" minHeight="13.0" minWidth="13.0" mnemonicParsing="false" onMouseClicked="#windowMaximized" style="-fx-background-radius: 0;" text="+" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="6.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxHeight="13.0" maxWidth="13.0" minHeight="13.0" minWidth="13.0" mnemonicParsing="false" onMouseClicked="#windowClosed" style="-fx-background-radius: 0;" text="X" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="6.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="200.0" layoutY="-14.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="backButton" disable="true" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#backButtonClicked" style="-fx-background-radius: 0;" text="&lt;" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="3.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="forwardButton" disable="true" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#forwardButtonClicked" style="-fx-background-radius: 0;" text="&gt;" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#homeButtonClicked" style="-fx-background-radius: 0;" text="H" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="2.0" />
+               </HBox.margin>
+            </Button>
+            <Button maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#refreshButtonClicked" style="-fx-background-radius: 0;" text="R" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="urlField" layoutX="226.0" layoutY="63.0" onKeyReleased="#urlFieldEnterPressed" style="-fx-background-radius: 0;" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="5.0" />
+      <Label layoutX="14.0" layoutY="67.0" text="Location: " AnchorPane.leftAnchor="5.0" />
+   </children>
+</AnchorPane>
